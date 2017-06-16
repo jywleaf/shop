@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>订单详情</title>
+	<link rel="stylesheet" href="./css/pub.css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<style>
+.detail{background: #fff;padding: 10px 3%;font-size: 10px;line-height: 20px;}
+.detail span:first-of-type{width:20%;text-align: right;display: inline-block; }
+#goods{padding-left: 5.5%;background: #fff;}
+#goods h3{line-height: 40px;font-size: 14px; font-weight: normal;}
+#goods .left{width:21%;float: left;}
+#goods .left>img{width: 100%;height: 75px;}
+#goods .center{width: 57%;float: left;margin-left: 10px;}
+#goods ul li{width: 100%; border-top:1px solid #dfdfdf;padding: 10px 0;display: inline-block;}
+.name{font-size:13px; }
+.format{font-size:12px;color:#878787; line-height: 25px;}
+.price{margin-top: 13px; font-size: 15px;color: #8b0f07; }
+.right{float: right;padding:55px 10px 0 0;}
+#fee{padding: 0 0 10px 5.5%;font-size: 13px;background: #fff;line-height: 20px;}
+.discount{width:100%;border-top:1px solid #dfdfdf;padding-top: 10px;}
+.freight{width: 30%;display: inline-block;}
+.tatal{float: right;margin-right: 10px;}
+</style>
+<body>
+<p style="height:45px;width:100%;float:left;"></p>
+<div id="container">
+	<div id="header">订单详情
+		<img src="./images/help12.jpg" alt="" id="back">
+	</div>
+	<div id="main">
+		<div class="detail">
+			<p><span>订单号：</span><span>138432328923</span></p>
+			<p><span>成交时间：</span><span>2017/3/3 10:34:33</span></p>
+			<p><span>当前状态：</span><span>等待配货</span></p>
+			<p><span>收货人：</span><span>李星</span></p>
+			<p><span>手机号码：</span><span>124434774423</span></p>
+			<p><span>收货地址：</span><span>火星</span></p>
+			<p><span>支付信息：</span><span>货到付款 城市超市礼品卡</span></p>
+		</div>
+		<p style="height:7px;"></p>
+		<div id="goods">
+			<h3>共3件商品</h3>
+			<ul>
+				<li>
+					<div class="left"><img src="images/cart2.jpg" alt=""></div>
+					<div class="center">
+						<div class="name">夏迪邮票莫斯卡多白气泡酒</div>
+						<div class="format">规格：750毫升</div>
+						<div class="price">￥118.00</div>
+					</div>
+					<div class="right">x 3</div>
+				</li>
+				<li>
+					<div class="left"><img src="images/cart3.jpg" alt=""></div>
+					<div class="center">
+						<div class="name">咖喱牛肉</div>
+						<div class="format">规格：约240g/份</div>
+						<div class="price">￥18.00</div>
+					</div>
+					<div class="right">x 3</div>
+				</li>
+				<li>
+					<div class="left"><img src="images/chicken.jpg" alt=""></div>
+					<div class="center">
+						<div class="name">KBR澳洲谷饲牛臀糜100%</div>
+						<div class="format">规格：约250g/盒</div>
+						<div class="price">￥118.00</div>
+					</div>
+					<div class="right">x 0.75</div>
+				</li>
+			</ul>
+		</div>
+		<div id="fee">
+			<div class="discount">优惠：￥0.00</div>
+			<div class="freight">运费：￥30.00</div>
+			<div class="tatal">总计：￥44.40</div>
+		</div>
+	</div>
+		<p style="width:85%;margin:30px auto;text-align:center;font-size:12px;color:#860e00;">说明：如需取消订单，请拨打客服热线400-333-4444</p>
+	<div id="footer">
+		<ul>
+			<a href="./index.html"><li><i class="icon-home" ></i><div>首页</div></li></a>
+			<a href="./classify.html"><li><i class="icon-reorder" style="color:#860e00"></i><div style="color:#860e00">分类</div></li></a>
+			<a href="./cart.html"><li><i class="icon-shopping-cart"><span>1</span></i><div>购物车</div></li></a>
+			<a href="./account.html"><li><i class="icon-user"></i><div>我的账户</div></li></a>
+		</ul>
+	</div>
+</div>
+<p style="height:60px;width:100%;float:left;"></p>
+
+
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/pub.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>登陆</title>
+</head>
+<link rel="stylesheet" href="./css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/pub.css">
+<style>
+
+#main{width: 100%; float: left;}
+#logo img{width: 45%;margin:45px auto;display:block;}
+#form1 div{height:40px; width:70%; margin:12px auto;border-bottom:2px solid #c08189;line-height: 40px;}
+#form1 input{height:20px;border: 0;background: #8a011d;color: #fff; font-size: 15px;font-weight: 500;outline: none;}
+#form1 div:last-of-type{border: 0;margin-top: 40px;}
+#form1 input[type="submit"]{width:66.7%;height:40px;background: #f7941c;line-height: 40px;font-size:16px; margin:0px auto;display: block;border-radius:4px;}
+#main a{text-decoration: none;font-size: 15px;color: #fff;}
+#left{float: left;margin:53px 0 53px 10%;}
+#right{float: right;margin:53px 10% 53px 0;color:#fff;t}
+#right span{height: 20px; border-bottom: 2px solid #fff;display: inline-block;}
+a{color:#fff;text-decoration: none;}
+.pageJump span{border-top: 5px solid #1b0005;border-left: 5px solid #1b0005;border-right: 5px solid #1b0005;}
+
+</style>
+<body style="background: #8a011d;">
+<p style="height:45px;width:100%;float:left;"></p>
+<div id="container">
+	<div id="header" style="background:#1b0005;color:#fff">登陆
+		<img src="./images/login1.png" alt="" id="back">
+		<img src="./images/login2.png" alt="" id="showpage">
+	</div>
+	<div id="main">
+		<div id="logo"><img src="./images/login3.png" alt=""></div>
+		<form action="" id="form1">
+			<div><input type="text" name="username" placeholder="邮箱/手机号"></div>
+			<div><input type="password" name="password" placeholder="密码"></div>
+			<div><input type="submit" value="登陆" ></div>
+		</form>
+		<hr style="width:80%;border:1px solid #fff;margin:77px auto 0px;">
+		<div id="left"><a href="">忘记密码？</a></div><div id="right">还没有账号？<a href="./register.html"><span>注册</span></a></div>
+	</div>
+	<div class="pageJump">
+		<span></span>
+		<ul>
+			<li><a href="./index.html"><img src="./images/pageJump1.png" alt="">首页</a></li>
+			<li><a href="./classify.html"><img src="./images/pageJump2.png" alt="">分类</a></li>
+			<li><a href="./cart.html"><img src="./images/pageJump3.png" alt="">购物车</a></li>
+			<li><a href="./account.html"><img src="./images/pageJump4.png" alt="">我的账户</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/pub.js"></script>
+<script>
+$(":submit").click(function(event){
+	$.ajax({
+		type:"POST",
+		data:{"username":$("[name=username]").val(),"password":$("[name=password]").val()},
+		url:"http://pc2016:8015/index.php?m=Home&c=User&a=loginTo",
+		success:function(data){
+			if(data.code=="ok"){
+				window.location.assign("index.html");
+				location.setItem("username":$("[name=username]").val());
+				location.setItem("password":$("[name=password]").val());
+			}else{
+				alert(data.msg);
+			}
+			console.log(data);
+		},
+		dataType:"json"
+	});
+	event.preventDefault()
+});
+</script>

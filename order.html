@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>提交订单</title>
+	<link rel="stylesheet" href="./css/pub.css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<style>
+a{color: inherit;text-decoration: none;}
+li{list-style: none;}
+#main h3{width: 94.5%;height: 40px;padding-left: 5.5%;line-height: 40px;font-size: 14px; font-weight: normal;}
+#main h3 span{width: 15px;height: 15px;display: inline-block;background:url('./images/sprite.png')}
+#main>div{position: relative; padding: 5px 5.5%; background: #fff; font-size: 13px;line-height: 30px;}
+.info>span:first-of-type{width: 60%;display: inline-block;}
+.info>span:nth-of-type(2){width: 37%;display: inline-block;}
+.detail{width: 15px;height: 30px;position: absolute;top:20px;right: 6%; display: inline-block; background: url("images/sprite.png") -84px 5px ;background-size: 800%;}
+.deliTime{height: 28px;}
+#main .payWay{line-height: 45px;}
+.payWay>span:first-of-type,.invoice>div>span:first-of-type{width: 25px ;height: 25px;position: absolute; top:15px; display: inline-block;background: url("images/sprite.png") 0 -180px;background-size:400%;}
+.payWay>span:nth-of-type(2),.invoice>div>span:nth-of-type(2){margin-left: 35px;line-height: 45px;}
+.invoice>div{width: 48.5%;display: inline-block;}
+#main .invoiceDetail{line-height: 50px;}
+.invoiceDetail>span:nth-of-type(2){margin-left:25px;color:#9d9d9d; }
+.note textarea{line-height:18px;resize:none;outline:none;border: 0;}
+#goods{padding-left: 5.5%;background: #fff;}
+#goods h3{line-height: 40px;font-size: 14px; font-weight: normal;}
+#goods .left{width:21%;float: left;}
+#goods .left>img{width: 100%;height: 75px;}
+#goods .center{width: 57%;float: left;margin-left: 10px;}
+#goods ul li{width: 100%; border-top:1px solid #dfdfdf;padding: 10px 0;display: inline-block;}
+.name{font-size:13px; }
+.format{font-size:12px;color:#878787; line-height: 25px;}
+.price{margin-top: 13px; font-size: 15px;color: #8b0f07; }
+.right{float: right;padding:55px 10px 0 0;}
+#fee{padding: 10px 5.5%;background: #fff;line-height: 30px;}
+#fee span{float: right;color:#890920;}
+#freight div{width: 20px;height: 20px; display: inline-block;margin-left: 10px;background: url("images/sprite.png") -47px -317px;background-size: 550%;}
+#footer{width: 94.5%; padding-left: 5.5%;padding-top:0;line-height: 45px;}
+#footer span:first-of-type{font-size: 15px;color: #8b0f07;font-weight: bold;}
+#footer span:last-of-type{width:25%;height:45px;background: #87021d;color: #fff;text-align: center;display: inline-block;float: right;}
+</style>
+<body>
+<p style="height:45px;width:100%;float:left;"></p>
+<div id="container">
+	<div id="header">结算
+		<img src="./images/help12.jpg" alt="" id="back">
+		<img src="./images/cart1.jpg" id="showpage">
+	</div>
+	<div id="main">
+		<h3>
+			<span style="background-position: -26px -137px;background-size: 450%; "></span>
+			收货地址
+		</h3>
+		<div class="info">
+			<span>收货人：李星</span>
+			<span>13345000000</span>
+			<span>收货地址：浙江 杭州某某街道</span>
+			<span class="detail"></span>
+		</div>
+		<h3>
+			<span style="background-position: -14px -220px;background-size: 600%; "></span>
+			配送时间
+		</h3>
+		<div class="deliTime">
+			<span class="detail" style="top:4px;"></span>
+		</div>
+		<h3>
+			<span style="background-position: -27px -220px;background-size: 600%; "></span>
+			选择支付方式
+		</h3>
+		<div class="payWay">
+			<span></span>
+			<span>货到付款</span>
+			<span class="detail" style="top:9px;"></span>
+		</div>
+		<h3>
+			<span style="background-position: -41px -220px;background-size: 600%; "></span>
+			索要支票
+		</h3>
+		<div class="invoice">
+			<div>
+				<span></span>
+				<span>不需要发票</span>
+			</div>
+			<div>
+				<span style="background-position:-23px -180px;"></span>
+				<span >需要发票</span>
+			</div>
+		</div>
+		<p style="height:0;border:1px solid #f6f6f6;"></p>
+		<div class="invoiceDetail">
+			<span>普通发票</span>
+			<span>个人，食品</span>
+			<span class="detail"></span>
+		</div>
+		<h3>
+			<span style="background-position: -56px -220px;background-size: 600%; "></span>
+			顾客留言
+		</h3>
+		<div class="note">
+			<textarea name="" id="" cols="30" rows="3" placeholder="选填"></textarea>
+		</div>
+	</div>
+	<p style="height:7px;"></p>
+	<div id="goods">
+		<h3>共3件商品</h3>
+			<ul>
+				<li>
+					<div class="left"><img src="images/cart2.jpg" alt=""></div>
+					<div class="center">
+						<div class="name">夏迪邮票莫斯卡多白气泡酒</div>
+						<div class="format">规格：750毫升</div>
+						<div class="price">￥118.00</div>
+					</div>
+					<div class="right">x 3</div>
+				</li>
+				<li>
+					<div class="left"><img src="images/cart3.jpg" alt=""></div>
+					<div class="center">
+						<div class="name">咖喱牛肉</div>
+						<div class="format">规格：约240g/份</div>
+						<div class="price">￥18.00</div>
+					</div>
+					<div class="right">x 3</div>
+				</li>
+				<li>
+					<div class="left"><img src="images/chicken.jpg" alt=""></div>
+					<div class="center">
+						<div class="name">KBR澳洲谷饲牛臀糜100%</div>
+						<div class="format">规格：约250g/盒</div>
+						<div class="price">￥118.00</div>
+					</div>
+					<div class="right">x 0.75</div>
+				</li>
+			</ul>
+	</div>
+	<p style="height:7px;"></p>
+	<div id="fee">
+		<div id="tatal">商品总额<span>￥444.00</span></div>
+		<div id="freight">运费<div></div><span>+￥0.00</span></div>
+	</div>
+	<div id="footer">
+		<div>应付金额：<span>￥884.00</span><span>提交订单 </span></div>
+	</div> 
+
+	<div class="pageJump">
+		<span></span>
+		<ul>
+			<li><a href="./index.html"><img src="./images/pageJump1.png" alt="">首页</a></li>
+			<li><a href="./classify.html"><img src="./images/pageJump2.png" alt="">分类</a></li>
+			<li><a href="./cart.html"><img src="./images/pageJump3.png" alt="">购物车</a></li>
+			<li><a href="./account.html"><img src="./images/pageJump4.png" alt="">我的账户</a></li>
+		</ul>
+	</div>
+</div>
+<p style="height:80px;width:100%;float:left;"></p>
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/pub.js"></script>
+</body>
+<script>
+
+</script>
+</html>

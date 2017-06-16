@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>全部订单</title>
+	<link rel="stylesheet" href="./css/pub.css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<style>
+li{list-style: none;}
+#main>ul{padding:10px 5.5%;background: #fff;}
+#main>ul li>div{font-size: 12px;}
+#main>ul li>div:nth-of-type(2){width:60%;display: inline-block;}
+#main>ul li>div:nth-of-type(3){float: right;}
+.goods{width: 100%;overflow: auto;}
+.goods ul{width: 200%; display: inline-block;overflow: hidden;}
+.goods ul li{width: 12%;float: left;margin:10px 5px 0 0;}
+.goods ul li>img{width: 100%;}
+.tatal{padding:10px 5.5%; background: #fff;}
+</style>
+<body>
+<p style="height:45px;width:100%;float:left;"></p>
+<div id="container">
+	<div id="header">全部订单
+		<img src="./images/help12.jpg" alt="" id="back">
+	</div>
+	<div id="main">
+		<ul>
+			<li>
+				<div>2017/1/2 10:10:11</div>
+				<div>订单号：1324324323232</div>
+				<div>等待配送</div>
+				<div class="goods">
+					<ul >
+						<li><img src="images/cart2.jpg" alt=""></li>
+						<li><img src="images/cart3.jpg" alt=""></li>
+						<li><img src="images/chicken.jpg" alt=""></li>
+						<li><img src="images/cart2.jpg" alt=""></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<p style="margin-left:5.5%; border:1px solid #eee;"></p>
+		<div class="tatal">共3件商品，总额￥444.00</div>
+	</div>
+	<div id="footer">
+		<ul>
+			<a href="./index.html"><li><i class="icon-home" ></i><div>首页</div></li></a>
+			<a href="./classify.html"><li><i class="icon-reorder" style="color:#860e00"></i><div style="color:#860e00">分类</div></li></a>
+			<a href="./cart.html"><li><i class="icon-shopping-cart"><span>1</span></i><div>购物车</div></li></a>
+			<a href="./account.html"><li><i class="icon-user"></i><div>我的账户</div></li></a>
+		</ul>
+	</div>
+</div>
+<p style="height:60px;width:100%;float:left;"></p>
+
+<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/pub.js"></script>
+</body>
+</html>
